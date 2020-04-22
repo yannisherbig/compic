@@ -5,7 +5,7 @@ import AddBild from './AddBild';
 class BilderContainer extends Component {
     state = { 
         isLoading : true,
-        bilder : [
+        bilder : [ // to-do: erstellungs-timestamp 
             {id: 1, name: 'Top View of Valley Near Body of Water', url: 'https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'},
             {id: 2, name: 'Gray Bridge and Trees', url: 'https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'}
         ]
@@ -28,12 +28,12 @@ class BilderContainer extends Component {
 
     addBild = (bild) => {
         bild.id = Math.random();
-        bild.name = '';
         let bilder = [...this.state.bilder, bild];
         this.setState({
             bilder
         })
     }
+
     render() { 
         //const {bilder, isLoading} = this.state;
         // if(isLoading)
